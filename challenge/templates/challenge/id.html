@@ -1,0 +1,21 @@
+{% extends 'challenge\basicTemplate.html' %}
+
+{% block title %}Produkt specifikt id {% endblock %}
+
+{% block content %}
+<h1>Vare for specifikt ID-nummer</h1>
+<table>
+    
+    <tr><td>ID</td><td>Vare Navn</td><td>Vare pris</td></tr>
+    {% for x in data %}
+    <tr>
+        <td style="padding:3px">{{ x.product_id }}</td><td> {{ x.name }}</td><td>{{ x.price }} {{ x.currency }}</td>
+    </tr>
+    
+    {% empty %}
+        <h2>Beklager vi har ikke nogen af disse produkter på lager</h2>
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

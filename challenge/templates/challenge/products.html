@@ -1,0 +1,25 @@
+{% extends 'challenge\basicTemplate.html' %}
+
+{% block title %}Produkter, sorteret{% endblock %}
+
+{% block content %}
+<h1>Liste sorteret med de 10 billigste ting i DB</h1>
+<table>
+    <tr><td>Vare Navn</td><td>Varens pris</td></tr>
+    {% for x in data %}
+    <tr>
+        <td style="padding:3px">
+            <a href="{{ x.product_id }}/">{{ x.name }}</a>
+        </td>
+        <td>{{ x.price }} {{ x.currency }}
+
+        </td>
+    </tr>
+    
+    {% empty %}
+        <h2>Beklager vi har ikke nogen af disse produkter på lager</h2>
+    {% endfor %}
+
+    </table>
+
+{% endblock %}

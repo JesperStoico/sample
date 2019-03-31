@@ -1,0 +1,17 @@
+{% extends 'challenge\basicTemplate.html' %}
+
+{% block title %}Unisport Code Challenge{% endblock %}
+
+{% block content %}
+
+<h1>Liste af links til de forskellige sider jeg har lavet:</h1><br />
+Jeg har valgt at lave det i Django, efter lidt research virkede det som et godt valg. <br />
+Da man kunne få noget op at stå ret hurtigt, og samtidig få en del foræret i form af Admin modul.<br /><br />
+<ul>
+<li><a href="products/">Produkt side med de 10 billigste varer</a><br /></li>
+<li><a href="products/kids/">Produkt side med de 10 billigste varer til børn</a> - Benyttet 'kids' feltet i JSON formatet</li>
+<li><a href="products/57625">Produkt side for specifikt ID nummer</a> - Link til andet <a href="products/44003">44003</a></li>
+<li><a href="products/paging/">Produkt side med paging for hver 10 varer</a></li><br />
+<li><a href="../admin/">Admin modul</a> - Her kan der tilføjes, ændres og slettes direkte i DB (User:admin, Pass:admin)</li>
+</ul>
+{% endblock %}
