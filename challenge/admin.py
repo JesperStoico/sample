@@ -1,6 +1,7 @@
 from django.contrib import admin
 
-#importere product ind i admin modulet, så vi kan redigere, slette og oprette
+# Making the App visible and usable through the admin module
+
 from .models import Product
 
 admin.site.register(Product)

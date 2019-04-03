@@ -1,16 +1,16 @@
 {% extends 'challenge\basicTemplate.html' %}
 
-{% block title %}Produkter, sorteret, Kids{% endblock %}
+{% block title %}Products sorted by Kids{% endblock %}
 
 {% block content %}
 <table>
-    <h1>Liste sorteret med de 10 billigste ting i DB, som har 1 (True) i kids</h1>
+    <h1>Products sorted by 10 cheapest, and which has Kids = true (1)</h1>
     {% for x in data %}
     <tr>
         <td style="padding:3px">{{ x.name }}</td><td>{{ x.price }} {{ x.currency }}</td>
     </tr>        
     {% empty %}
-        <h2>Beklager vi har ikke nogen af disse produkter på lager</h2>
+        <h2>Sorry, we dont have this product in stock</h2>
     {% endfor %}
 
     </table>

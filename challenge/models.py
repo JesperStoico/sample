@@ -1,6 +1,10 @@
 from django.db import models
 
-# Database formatet kan optimeres hvis det er nødvendigt, sat med standard værdier blot for test formål
+# The data model for the project, which is also the DB layout.
+# This format is not optimised, as it is just for testing purposes.
+# I have commented out the data i dont use in this code_challenge.
+
+
 class Product(models.Model):
     kids = models.BooleanField(null=True, blank=True)
     name = models.CharField(max_length=255, blank=True)

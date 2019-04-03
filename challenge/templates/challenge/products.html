@@ -1,11 +1,11 @@
 {% extends 'challenge\basicTemplate.html' %}
 
-{% block title %}Produkter, sorteret{% endblock %}
+{% block title %}Products sorted{% endblock %}
 
 {% block content %}
-<h1>Liste sorteret med de 10 billigste ting i DB</h1>
+<h1>Products sorted by 10 cheapest products</h1>
 <table>
-    <tr><td>Vare Navn</td><td>Varens pris</td></tr>
+    <tr><td>Product name</td><td>Product price</td></tr>
     {% for x in data %}
     <tr>
         <td style="padding:3px">
@@ -17,7 +17,7 @@
     </tr>
     
     {% empty %}
-        <h2>Beklager vi har ikke nogen af disse produkter på lager</h2>
+        <h2>Sorry, we dont have this product in stock</h2>
     {% endfor %}
 
     </table>
