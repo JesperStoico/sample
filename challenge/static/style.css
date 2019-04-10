@@ -1,12 +1,19 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: lightgrey;      
+    background-color: lightgrey;
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    float: center;
 }
 
 td {
-    border: 1px solid black;
+    border: 0px solid black;
     padding-left: 15px;
     padding-right: 15px;
+    background:grey;
 }
 
 a {
@@ -22,7 +29,4 @@ li {
     text-align: left;
 }
 
-h1 {
-    text-align: center; 
-}
 

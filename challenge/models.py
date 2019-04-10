@@ -1,9 +1,14 @@
 from django.db import models
 
-# The data model for the project, which is also the DB layout.
-# This format is not optimised, as it is just for testing purposes.
-# I have commented out the data i dont use in this code_challenge.
+'''
+The data model for the project, which is also the DB layout.
+This format is not optimised, as it is just for testing purposes.
+I have commented out the data i dont use in this code_challenge.
 
+If you change the format run following commands in the shell:
+    py manage.py makemigrations
+    py manage.py migrate
+'''
 
 class Product(models.Model):
     kids = models.BooleanField(null=True, blank=True)
@@ -12,7 +17,7 @@ class Product(models.Model):
     #discount_percentage = models.IntegerField(blank=True)
     kid_adult = models.BooleanField(null=True, blank=True)
     #free_porto = models.BooleanField()
-    #image = models.CharField(max_length=255)
+    image = models.CharField(max_length=255, blank=True)
     #sizes = models.CharField(max_length=255)
     #package = models.BooleanField()    
     price = models.FloatField(blank=True)
@@ -20,9 +25,9 @@ class Product(models.Model):
     #product_labels = models.CharField(max_length=255)
     #url = models.CharField(max_length=255)
     #online = models.BooleanField()
-    #price_old = models.FloatField()
+    price_old = models.FloatField(blank=True, default=0)
     currency = models.CharField(max_length=255, blank=True)
-    #img_url = models.CharField(max_length=255)    
+    img_url = models.CharField(max_length=255, blank=True)
     product_id = models.CharField(max_length=255, blank=True)
     #women = models.BooleanField()    
 
