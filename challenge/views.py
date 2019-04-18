@@ -14,14 +14,12 @@ def index(request):  # View to a simple html file, with links to the other views
 
 def products(request):  # View for the 10 cheapest products, taken away any with zero in price
     data = Product.objects.order_by('price')[:10]
-    data1 = [x for x in data if x.price != 0]
-    diff = len(data) - len(data1)
-    if diff < 10:
-        number = 10 + diff
-        data = Product.objects.order_by('price')[:number]
+    data2 = [x for x in data if x.price == 0]
+    diff = len(data) + len(data2)
+    if diff > 10:
+        data = Product.objects.order_by('price')[:diff]
         data = [x for x in data if x.price != 0]
-
-    return render(request, 'challenge/products.html', {'data': data})
+    return render(request, 'challenge/products.html', {'data': data, 'data2': data2})
 
 # View for the 10 cheapest products with 'kids' = True
 
@@ -53,5 +51,5 @@ def paging(request):
         posts = paginator.page(page)
     except(EmptyPage, InvalidPage):
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'challenge/paging.html', {'posts':posts})
+    return render(request, 'challenge/paging.html', {'posts':posts, 'data':data})
 

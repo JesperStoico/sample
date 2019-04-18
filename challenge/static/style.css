@@ -5,8 +5,12 @@ body {
 }
 
 table {
-    width: 80%;
+    width: 50%;
     float: center;
+}
+
+#zero{
+    background-color:red;
 }
 
 td {
