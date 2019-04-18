@@ -51,5 +51,5 @@ def paging(request):
         posts = paginator.page(page)
     except(EmptyPage, InvalidPage):
         posts = paginator.page(paginator.num_pages)
-    return render(request, 'challenge/paging.html', {'posts':posts, 'data':data})
+    return render(request, 'challenge/paging.html', {'posts':posts})
 
