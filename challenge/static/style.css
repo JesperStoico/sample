@@ -1,6 +1,6 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
-    background-color: lightgrey;
+    background-color: white;
     text-align: center;
 }
 
@@ -9,15 +9,23 @@ table {
     float: center;
 }
 
+table, tr, td {
+    border: solid 1px black;
+    border-collapse: collapse;
+}
+
+#top_menu{
+    background-color: #80ff80;
+}
+
 #zero{
-    background-color:red;
+    background-color: red;
 }
 
 td {
     border: 0px solid black;
     padding-left: 15px;
     padding-right: 15px;
-    background:grey;
 }
 
 a {

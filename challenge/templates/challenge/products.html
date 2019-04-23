@@ -6,7 +6,9 @@
 <h1>Products sorted by 10 cheapest products</h1>
 - Products with price = zero is removed<br /><br />
 <table>
-    <tr><td>Product name</td><td>Product price</td><td>Product image</td></tr>
+    <tr id="top_menu">
+        <td>Product name</td><td>Product price</td><td>Product image</td>
+    </tr>
     {% for x in data %}
     <tr>
         <td>
@@ -23,6 +25,7 @@
         <h2>Undskyld, vi har ikke dette/disse produkter på lager.</h2>
     {% endfor %}
 </table>
+<br ><br >
 <table id="zero">
     {% if data2 %}
     <tr>
@@ -46,6 +49,7 @@
         </td>
     </tr>
     {% endfor %}
- </table>
+</table>
+
 
 {% endblock %}

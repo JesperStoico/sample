@@ -39,9 +39,9 @@ for a in data['products']:
     b.price_old = b.price_old.replace('.', '')
     if b.price_old == "0,00":
         b.price_old = "0.00"
-    #print("Første print " + b.price_old)
+
     b.price_old = b.price_old.replace(',', '.')
-    #print("Andet print " + b.price_old)
+
     b.price_old = float(b.price_old)
     b.currency = a['currency']
     b.product_id = a['id']
